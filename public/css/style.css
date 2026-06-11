@@ -1,0 +1,267 @@
+/* public/css/style.css */
+:root {
+    --green: #4caf50;
+    --orange: #ff9800;
+    --red: #e53935;
+    --gray: #9e9e9e;
+    --bg: #fdf6ec;
+    --text: #3e3a36;
+    --card-bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Georgia', 'Segoe UI', serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff3e0;
+    border-bottom: 2px solid #f0e0d0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.topbar h1 { margin: 0; font-size: 1.4rem; }
+.topbar nav { display: flex; gap: 1rem; }
+.topbar nav a { color: var(--text); text-decoration: none; }
+.topbar nav a:hover { text-decoration: underline; }
+
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.user-name { font-weight: bold; }
+
+.user-role {
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.badge-role-preparateur { background: #1976d2; }
+.badge-role-pharmacien { background: var(--green); }
+.badge-role-administrateur { background: #6a1b9a; }
+
+.logout {
+    color: var(--red);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.logout:hover { text-decoration: underline; }
+
+/* ---------------- Login page ---------------- */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.login-card h1 { margin: 0 0 0.2rem; text-align: center; }
+.login-card .subtitle { text-align: center; color: #888; margin: 0 0 1rem; font-size: 0.9rem; }
+
+.login-card label { font-size: 0.85rem; font-weight: bold; }
+.login-card input {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #f0e0d0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.login-card button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    background: #6a4c93;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.login-card button:hover { background: #57417a; }
+
+.alert-error {
+    background: #fdecea;
+    color: var(--red);
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    color: var(--green);
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.admin-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.admin-form input,
+.admin-form select {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #f0e0d0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.admin-form button {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #6a4c93;
+    color: #fff;
+    cursor: pointer;
+}
+.admin-form button:hover { background: #57417a; }
+
+.admin-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: bold;
+    gap: 0.2rem;
+}
+.admin-form label input { font-weight: normal; }
+
+.btn-action {
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: #6a4c93;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.btn-action:hover { background: #57417a; }
+
+.filter-bar {
+    display: flex;
+    gap: 0.6rem;
+    margin: 1rem 0;
+}
+.filter-bar a {
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid #f0e0d0;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.85rem;
+    background: var(--card-bg);
+}
+.filter-bar a.active {
+    background: var(--red);
+    color: #fff;
+    border-color: var(--red);
+}
+
+.demo-accounts {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #999;
+    border-top: 1px dashed #f0e0d0;
+    padding-top: 0.6rem;
+}
+.demo-accounts ul { padding-left: 1.1rem; margin: 0.3rem 0 0; }
+
+
+.container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+
+.summary-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.card {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem;
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.card .count { display: block; font-size: 2rem; font-weight: bold; }
+.card .label { font-size: 0.85rem; color: #777; }
+
+.card-green .count { color: var(--green); }
+.card-orange .count { color: var(--orange); }
+.card-red .count { color: var(--red); }
+.card-gray .count { color: var(--gray); }
+
+.batch-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.batch-table th, .batch-table td {
+    padding: 0.6rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f0e0d0;
+}
+
+.badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.badge-warning { background: var(--orange); }
+.badge-critical { background: var(--red); }
+.badge-ok { background: var(--green); }
+.badge-expired { background: var(--gray); }
+
+.row-critical { background: #fdecea; }
+.row-warning { background: #fff8e1; }
+
+.alert-list { padding-left: 1.2rem; }
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    color: #999;
+    font-size: 0.8rem;
+}
