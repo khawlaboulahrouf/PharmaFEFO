@@ -57,9 +57,7 @@ CREATE TABLE stock_movements (
     CONSTRAINT fk_movement_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 );
 
--- ----------------------------------------------------------
--- Table: alerts (1 stock_batch -> * alerts)
--- ----------------------------------------------------------
+
 CREATE TABLE alerts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     stock_batch_id INT NOT NULL,
