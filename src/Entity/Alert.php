@@ -1,5 +1,4 @@
 <?php
-// src/Entity/Alert.php
 
 namespace PharmaFEFO\Entity;
 
@@ -10,7 +9,7 @@ class Alert
     private int $id;
     private int $stockBatchId;
     private string $message;
-    private string $level; // INFO | WARNING | CRITICAL
+    private string $level; 
     private DateTime $createdAt;
 
     public function __construct(int $id, int $stockBatchId, string $message, string $level, DateTime $createdAt)
@@ -47,9 +46,7 @@ class Alert
         return $this->createdAt;
     }
 
-    /**
-     * Une alerte est critique si son niveau vaut CRITICAL.
-     */
+    
     public function isCritical(): bool
     {
         return $this->level === 'CRITICAL';
