@@ -1,6 +1,5 @@
 <?php
-// config/database.php
-// Connexion PDO encapsulée (Singleton)
+
 
 namespace PharmaFEFO\Config;
 
@@ -19,7 +18,7 @@ class Database
 
     private function __construct()
     {
-        // Empêche l'instanciation directe
+       
     }
 
     public static function getConnection(): PDO
